@@ -1,7 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Vidaloka&display=swap");
+
+:root {
+  --font-roboto: "Roboto Slab", serif;
+  --font-vidaloka: "Vidaloka", serif;
+
+  --color-blue-dark-001: #01326c;
+  --color-blue-dark-002: #0066cb;
+  --color-blue-medium: #47a1f7;
+  --color-blue-light: #8cd3ff;
+  --color-green: #248c35;
+
+  --font-size-18pt: 16px;
+  --font-size-30pt: 24px;
+  --font-size-49pt: 55px;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+
 * {
+  font-family: var(--font-roboto);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
 }
 
 header {
@@ -32,9 +55,78 @@ header > .social {
 .contenedor-principal {
   width: 100vw;
   height: 100vh;
+  background-color: #1a2020;
   border: 2px solid red;
-  background-image: url(../src/background/img1.webp);
-  background-size:cover;
+  background-image: url(../src/background/statue-section-1.webp);
+  background-position-y: top;
+  background-position-x: 65%;
+  background-size: 40%;
+  background-repeat: no-repeat;
   position: relative;
   z-index: -10;
 }
+
+.contenedor-texto-hero {
+  position: relative;
+  top: 35%;
+  left: 20%;
+  border: 2px solid red;
+  width: 60vw;
+  height: 40vh;
+  padding:1em;
+}
+
+.contenedor-texto-hero > h1 {
+  font-size: 4.5em;
+  line-height: 1.5em;
+  font-family: var(--font-vidaloka);
+  margin: 0.5em 0em;
+  font-weight: 10;
+}
+.contenedor-texto-hero > h2 {
+  font-size: 1.2em;
+  line-height: 1.6em;
+  margin: 0.5em 0em;
+  font-weight: lighter;
+}
+
+.contenedor-texto-hero > h3 {
+    font-size: 1.5em;
+    margin: 0.5em 0em;
+    font-weight: lighter;
+  }
+
+.contenedor-informacion{
+    position: relative;
+    top: 35%;
+    left: 20%;
+    border: 2px solid red;
+    width: 60vw;
+    height: 20vh;
+    display:flex;
+    flex-direction: row;
+}
+
+.hour , .location{
+ 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding:1em;
+   width: 20%;
+
+}
+.hour>h2 , .location>h2{
+ text-transform: capitalize;
+ font-weight:400;
+ font-size: 1em;
+ margin:0.8em 0;
+
+}
+
+.hour>p , .location>p{
+    text-transform: capitalize;
+    font-weight:100;
+    font-size: 0.8em;
+   
+   }
