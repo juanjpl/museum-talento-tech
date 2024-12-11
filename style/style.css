@@ -1,8 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+header {
+  width: 100vw;
+  border: 2px solid blue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  position: fixed;
+}
 
+header > .logo {
+  width: 10%;
+  border: 2px solid blue;
+}
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+header > nav {
+  width: 50%;
+  border: 2px solid blue;
+}
+
+header > .social {
+  width: 20%;
+  border: 2px solid blue;
+}
+.contenedor-principal {
+  width: 100vw;
+  height: 100vh;
+  border: 2px solid red;
+  background-image: url(../src/background/img1.webp);
+  background-size:cover;
+  position: relative;
+  z-index: -10;
 }
