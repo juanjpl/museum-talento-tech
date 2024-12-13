@@ -89,7 +89,7 @@ margin:0 0.5em
   background-repeat: no-repeat;
   position: relative;
   z-index: -10;
-  animation:   30s ease-in-out infinite;
+  animation: change 50s ease-in infinite;
   z-index: 20;
 }
 
