@@ -7,7 +7,7 @@
     <title>Museum</title>
   </head>
   <body>
-    <header class="slide-in-blurred-top">
+    <header >
       <div class="logo">
         <img src="./src/logo003.png" alt="logo met" />
       </div>
@@ -55,11 +55,11 @@
           <form class="formulario-contacto" action="https://formspree.io/f/xovqergj" method="post">
 
             <label for="name">Name:</label>
-            <input name="name" id="name" type="text">
+            <input name="name" id="name" type="text" required>
             <label for="email">Email:</label>
-            <input name="email" id="email" type="email">
-            <label for="message">Your Email</label>
-            <textarea name="message" id="message" type="text"></textarea>
+            <input name="email" id="email" type="email" required>
+            <label for="message">Your Message:</label>
+            <textarea name="message" id="message" type="text" required></textarea>
 
 
             <button class="btn" type="submit">Submit</button>
