@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Vidaloka&display=swap");
+
+:root {
+  --font-roboto: "Roboto Slab", serif;
+  --font-vidaloka: "Vidaloka", serif;
+
+  --color-blue-dark-001: #01326c;
+  --color-blue-dark-002: #0066cb;
+  --color-blue-medium: #47a1f7;
+  --color-blue-light: #8cd3ff;
+  --color-green: #248c35;
+
+  --font-size-18pt: 16px;
+  --font-size-30pt: 24px;
+  --font-size-49pt: 55px;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+
+* {
+  font-family: var(--font-roboto);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+header {
+  width: 100vw;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.125);
+  z-index: 25;
+}
+
+header > .logo {
+  width: 10%;
+  
+}
+header > .logo >img{
+width: 80%;
+position: relative;
+top:1em;
+  }
+
+header > nav {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+header > nav >ul>li{
+font-size: 1.2em;
+margin:0 1em;
+text-transform: uppercase;
+font-family: var(--font-roboto);
+font-weight: 400;
+  }
+
+header > .social {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+
+}
+header > .social>ul>li>a>i {
+font-size: 1.2em;
+margin:0 0.5em
+    
+  
+  }
+.contenedor-principal {
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a2020;
+  background-image: url(../src/img1.webp);
+  background-size:cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+
+ 
+}
+
+.contenedor-texto-hero {
+
+  width: 60vw;
+  height:max-content;
+  padding:1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.447);
+  margin: 10% auto;
+}
+
+.contenedor-texto-hero > h1 {
+  font-size: 4.8em;
+  line-height: 1.5em;
+  font-family: var(--font-vidaloka);
+  margin: 0.5em 0em;
+  font-weight: 10;
+}
+.contenedor-texto-hero > h2 {
+  font-size: 1.2em;
+  line-height: 1.6em;
+  margin: 0.5em 0em;
+  font-weight: lighter;
+}
+
+.formulario-contacto{
+display: flex;
+flex-direction: column;
+text-align: left;
+width: 70%;
+margin:0 auto;
+color:black;
+}
+
+.formulario-contacto>label{
+
+  margin:0.8em 0;
+    color:black;
+    font-size: 1.2em;
+    font-weight: 400;
+    }
+
+.formulario-contacto>input{
+padding:1em ;
+margin:0.5em 0;
+  color:black;
+  font-size: 1em;
+  }
+
+.btn{
+    font-size: 1.5em;
+    background-color: #0000dd;
+    border:2px solid #0000dd;
+    color:white;
+    width:fit-content;
+    height:fit-content;
+    padding:0.5em 2.5em;
+ transition: 0.6s ease-in-out;
+ margin: 0.8em auto;
+ 
+}
+
+.btn:hover {
+
+  background-color: #000096;
+  border:2px solid transparent;
+
+
+}
+
+
+
+
+
+
+ .slide-in-blurred-top{-webkit-animation:slide-in-blurred-top 2s cubic-bezier(.23,1.000,.32,1.000) 1s both;animation:slide-in-blurred-top 2s cubic-bezier(.23,1.000,.32,1.000) 1s both}
+ @-webkit-keyframes slide-in-blurred-top{0%{-webkit-transform:translateY(-1000px) scaleY(2.5) scaleX(.2);transform:translateY(-1000px) scaleY(2.5) scaleX(.2);-webkit-transform-origin:50% 0;transform-origin:50% 0;-webkit-filter:blur(40px);filter:blur(40px);opacity:0}100%{-webkit-transform:translateY(0) scaleY(1) scaleX(1);transform:translateY(0) scaleY(1) scaleX(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes slide-in-blurred-top{0%{-webkit-transform:translateY(-1000px) scaleY(2.5) scaleX(.2);transform:translateY(-1000px) scaleY(2.5) scaleX(.2);-webkit-transform-origin:50% 0;transform-origin:50% 0;-webkit-filter:blur(40px);filter:blur(40px);opacity:0}100%{-webkit-transform:translateY(0) scaleY(1) scaleX(1);transform:translateY(0) scaleY(1) scaleX(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-filter:blur(0);filter:blur(0);opacity:1}}
+
