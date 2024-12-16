@@ -13,13 +13,16 @@
       </div>
       <nav>
         <ul>
+            <li><a href="../../index.html">Home</a></li>
+          </ul>
+        <ul>
           <li><a href="#">History</a></li>
         </ul>
         <ul>
           <li><a href="#">About Us</a></li>
         </ul>
         <ul>
-          <li><a href="#">Ticket</a></li>
+          <li><a href="#">Products</a></li>
         </ul>
         <ul>
           <li><a href="#">Contact</a></li>
@@ -55,15 +58,17 @@
           <form class="formulario-contacto" action="https://formspree.io/f/xovqergj" method="post">
 
             <label for="name">Name:</label>
-            <input name="name" id="name" type="text" required>
+            <input name="name" id="name" type="text" oninput="{onInputChange(this.id,this.value),habilitarEnvio()}" required>
             <label for="email">Email:</label>
-            <input name="email" id="email" type="email" required>
+            <input name="email" id="email" type="email"  oninput="{onInputChange(this.id,this.value),habilitarEnvio()}"  required>
             <label for="message">Your Message:</label>
-            <textarea name="message" id="message" type="text" required></textarea>
+            <textarea name="message" id="message" type="text" oninput="{onInputChange(this.id,this.value),habilitarEnvio()}"  required></textarea>
 
 
-            <button class="btn" type="submit">Submit</button>
+            <button id="boton-enviar" class="btn"  onclick="{event.preventDefault();chequearEnvio()}"
+            class="boton-enviar-deshabilitado" >Submit</button>
           </form>
+    
         </div>
        
       </div>
@@ -71,6 +76,8 @@
     <script
       src="https://kit.fontawesome.com/862ac02261.js"
       crossorigin="anonymous"
+      
     ></script>
+    <script src="./app/app.js"></script>
   </body>
 </html>
