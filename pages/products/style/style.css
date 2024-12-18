@@ -78,7 +78,7 @@ header > .social > ul > li > a > i {
   width: 100vw;
   height: 100vh;
   background-color: #1a2020;
-  background-image: url(../src/img1.webp);
+  background-image: url(../src/img2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 20;
@@ -86,68 +86,40 @@ header > .social > ul > li > a > i {
   flex-direction: column;
 }
 
-.contenedor-texto-hero {
-  width: 40vw;
-  height: max-content;
+.contenedor-productos {
+  width:min-content;
+  height:70vh ;
   padding: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.447);
   margin:auto;
+
+
 }
 
-.contenedor-texto-hero > h1 {
-  font-size: 3em;
-  line-height: 1.5em;
-  font-family: var(--font-vidaloka);
-  margin: 0.5em 0em;
-  font-weight: 10;
+#productos{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+margin:auto;
+
 }
 
-.formulario-contacto {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  width: 70%;
-  margin: 0 auto;
-  color: black;
+.next , .prev {
+  margin:auto;
 }
 
-.formulario-contacto > label {
-  margin: 0.8em 0;
-  color: black;
-  font-size: 1em;
-  font-weight: 400;
-}
-
-.formulario-contacto > input {
-  padding: 0.6em;
-  margin: 0.5em 0;
-  color: black;
-  font-size: 1em;
-}
-
-.formulario-contacto > textarea {
-  padding: 0.6em;
-  margin: 0.5em 0;
-  color: black;
-  font-size: 1em;
-}
-
-.btn {
-  font-size: 1.5em;
+.next>span ,.prev>span {
+  border:1px solid #0000dd;
+  padding:0.5em 1em;
   background-color: #0000dd;
-  border: 2px solid #0000dd;
-  color: white;
-  width: fit-content;
-  height: fit-content;
-  padding: 0.5em 2.5em;
   transition: 0.6s ease-in-out;
-  margin: 0.8em auto;
 }
 
+.next>span:hover , .prev>span:hover{
+  background-color: #000076;
+}
 
 
 .slide-in-blurred-top {
@@ -197,22 +169,3 @@ header > .social > ul > li > a > i {
 }
 
 
-.boton-enviar-habilitado{
-
-  background-color: #0000dd;
-  border: 2px solid #0000dd;
-
-  
-}
-
-.boton-enviar-habilitado:hover {
-  background-color: #000096;
-  border: 2px solid transparent;
-}
-
-
-
-.boton-enviar-deshabilitado{
-  background-color: rgb(220, 220, 220);
-  border:rgb(220, 220, 220);
-}

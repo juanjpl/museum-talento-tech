@@ -55,13 +55,13 @@ function habilitarEnvio() {
     !formularioError.message
   ) {
     botonEnviar.setAttribute("disabled", true);
-    botonEnviar.className = "boton-enviar-deshabilitado";
+    botonEnviar.className = "btn boton-enviar-deshabilitado";
     console.log("Formulario chequeado y deshabilitado, faltan completar datos");
   } else {
     console.log("Habilitado para enviar");
     botonEnviar.removeAttribute("disabled", false);
-    botonEnviar.className.remove = "boton-enviar-deshabilitado";
-    botonEnviar.className = "boton-enviar-habilitado";
+    botonEnviar.className.remove = "btn boton-enviar-deshabilitado";
+    botonEnviar.className = "btn boton-enviar-habilitado";
     console.log("Formulario chequeado y habilitado");
   }
 }

@@ -22,10 +22,10 @@
           <li><a href="#">About Us</a></li>
         </ul>
         <ul>
-          <li><a href="../products/products.html">Products</a></li>
+          <li><a href="./products.html">Products</a></li>
         </ul>
         <ul>
-          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
         </ul>
       </nav>
       <div class="social">
@@ -53,21 +53,16 @@
     </header>
     <main>
       <div class="contenedor-principal">
-        <div class="contenedor-texto-hero">
-          <h1 >Contact Us</h1>
-          <form class="formulario-contacto" action="https://formspree.io/f/xovqergj" method="post">
+        <div class="contenedor-productos">
+        <div class="prev">
+          <span onclick="prev(1)">Prev</span>
+        </div>
+        <div id="productos" >
 
-            <label for="name">Name:</label>
-            <input name="name" id="name" type="text" oninput="{onInputChange(this.id,this.value),habilitarEnvio()}" required>
-            <label for="email">Email:</label>
-            <input name="email" id="email" type="email"  oninput="{onInputChange(this.id,this.value),habilitarEnvio()}"  required>
-            <label for="message">Your Message:</label>
-            <textarea name="message" id="message" type="text" oninput="{onInputChange(this.id,this.value),habilitarEnvio()}"  required></textarea>
-
-
-            <button id="boton-enviar"    type="submit" class="btn"  onclick="{chequearEnvio()}"
-            class="boton-enviar-deshabilitado" >Submit</button>
-          </form>
+        </div>
+        <div class="next">
+          <span onclick="next(1)">Next</span>
+        </div>
     
         </div>
        
