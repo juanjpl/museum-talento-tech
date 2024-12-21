@@ -483,7 +483,7 @@ function prev(page_number) {
   }
 }
 
-console.log("comenzando el llamado");
+console.log("comenzando llamado de la api museum");
 
 let pagination = [ ]
 
