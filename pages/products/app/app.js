@@ -510,12 +510,17 @@ const llamandoAPI = async () => {
 };
 
 llamandoAPI();
-console.log(productos)
+//console.log(productos)
+
+const imprimirTarjeta = (id)=>{
+  console.log(`Quiero ver el pokemon: ${id}`)
+}
 
 
 const imprimirProducts = (data) => {
 
     document.getElementById("productos").innerHTML = "";
+
     if(!data){
         console.log("no hay datos")
     }else{
@@ -525,9 +530,12 @@ const imprimirProducts = (data) => {
             let type = `<h3>${data[i].types[0].type.name}</h3>`;
             let url = `<p>${data[i].species.url}</p>`;
             let img = `<img src=${data[i].sprites.other["official-artwork"].front_default} alt=${data[i].name} width="150" height="150" >`;
-        
+            let boton = `<button class="btnVer" onClick={imprimirTarjeta(${data[i].id})} >Ver</button>`
+
             var div = document.createElement("div");
-            div.innerHTML = `${name} ${id} ${type} ${url} ${img}`;
+            div.className += "card";
+            div.setAttribute("id", `${data[i].id}`);
+            div.innerHTML = `${name} ${id} ${type} ${url} ${img} ${boton}`;
             document.getElementById("productos").appendChild(div);
           }
     }
