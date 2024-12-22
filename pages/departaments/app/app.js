@@ -90,8 +90,8 @@ const imprimirProducts = (data) => {
             <a class="btnVer" href="https://juanjpl.github.io/museum-talento-tech/pages/products/products.html" onClick={imprimirTarjeta(${data[i].departmentId})} >Ver</a>
             `;
 
-//https://juanjpl.github.io/museum-talento-tech/pages/products/products.html
-            //console.log(div);
+
+       
             document.getElementById("departamentos").appendChild(div);
           }
     }

@@ -75,8 +75,10 @@ const imprimirProducts = (data) => {
             <h3>${data.artistDisplayName}</h3>
             <p>${data.objectURL}</p>
             <img src=${data.primaryImage} alt={${data.title} ? ${data.title}: https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930} width="150" height="150" >
-           <a class="btnVer" onClick={imprimirTarjeta(${data.objectID})} >Agregar</a>
+           <a class="btnVer" href="https://juanjpl.github.io/museum-talento-tech/pages/cart/cart.html" onClick={imprimirTarjeta(${data.objectID})} >Agregar</a>
             `;
+
+            
             
             document.getElementById("producto").appendChild(div);
 
