@@ -51,7 +51,7 @@ llamandoAPI(productSelected);
 const imprimirTarjeta = (id)=>{
   console.log(`Quiero ver el producto: ${id}`)
   localStorage.setItem("departamentSelected",`${id}` );
-  window.location.pathname = "../../../pages/cart/cart.html";
+
 
 }
 
@@ -75,7 +75,7 @@ const imprimirProducts = (data) => {
             <h3>${data.artistDisplayName}</h3>
             <p>${data.objectURL}</p>
             <img src=${data.primaryImage} alt={${data.title} ? ${data.title}: https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930} width="150" height="150" >
-           <button class="btnVer" onClick={imprimirTarjeta(${data.objectID})} >Agregar</button>
+           <a class="btnVer" onClick={imprimirTarjeta(${data.objectID})} >Agregar</a>
             `;
             
             document.getElementById("producto").appendChild(div);
