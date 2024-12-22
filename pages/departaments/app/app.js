@@ -87,9 +87,10 @@ const imprimirProducts = (data) => {
             div.innerHTML = `
             <h4>${data[i].departmentId}</h4>
             <h2>${data[i].displayName}</h2>
-            <a class="btnVer" href="../products/products.html" onClick={imprimirTarjeta(${data[i].departmentId})} >Ver</a>
+            <a class="btnVer" href="https://juanjpl.github.io/museum-talento-tech/pages/products/products.html" onClick={imprimirTarjeta(${data[i].departmentId})} >Ver</a>
             `;
 
+//https://juanjpl.github.io/museum-talento-tech/pages/products/products.html
             //console.log(div);
             document.getElementById("departamentos").appendChild(div);
           }
