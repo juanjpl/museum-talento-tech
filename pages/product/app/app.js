@@ -1,11 +1,11 @@
 
 let productos= [
   {
-    objectID :"",
-    GalleryNumber :"",
+    objectID :"1",
+    GalleryNumber :"1",
     title:"No found",
-    artistDisplayName :"",
-    objectURL: "",
+    artistDisplayName :"1",
+    objectURL: "1",
     primaryImage :"https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930 "
    }
   ];
@@ -28,7 +28,7 @@ const llamandoAPI = async (productSelected) => {
     );
 
     const data = await respuesta.json()  
-    console.log(data);
+    //console.log(data);
 
     
 
@@ -50,6 +50,8 @@ llamandoAPI(productSelected);
 
 const imprimirTarjeta = (id)=>{
   console.log(`Quiero ver el producto: ${id}`)
+  localStorage.setItem("departamentSelected",`${id}` );
+  window.location.pathname = "../../../pages/cart/cart.html";
 
 }
 
@@ -73,7 +75,7 @@ const imprimirProducts = (data) => {
             <h3>${data.artistDisplayName}</h3>
             <p>${data.objectURL}</p>
             <img src=${data.primaryImage} alt={${data.title} ? ${data.title}: https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930} width="150" height="150" >
-           <button class="btnVer" onClick={imprimirTarjeta(${data.objectID})} >Guardar</button>
+           <button class="btnVer" onClick={imprimirTarjeta(${data.objectID})} >Agregar</button>
             `;
             
             document.getElementById("producto").appendChild(div);
