@@ -1,39 +1,6 @@
-let departamentos = [
-  {
-    departmentId:"",
-    deptImg:"../src/img2.jpg",
-    displayName:""
-  }
-];
-let pagina = 1;
-let pagination = [];
+import { departamentos } from "./dataCollections.js";
 
-function next(page_number) {
-  if (pagina < departamentos.length / 3) {
-    pagina += page_number;
-    let depts = departamentos.slice((pagina - 1) * 6, pagina * 6);
-    document.getElementById("departamentos").innerHTML = "";
-    imprimirProducts(depts);
-  }
-}
-
-function prev(page_number) {
-  if (pagina > 1) {
-    pagina -= page_number;
-    let depts = departamentos.slice((pagina - 1) * 6, pagina * 6);
-    document.getElementById("departamentos").innerHTML = "";
-    imprimirProducts(depts);
-  }
-}
-/*
-   document.getElementById("next").innerHTML = "";
-    document.getElementById("prev").innerHTML = "";
-    let span = document.createElement("span");
-    span.className += "card";
-    console.log(span)
-*/
 console.log("comenzando llamado de la api categorias");
-console.log(`${departamentos}`);
 
 const llamandoAPI = async () => {
   try {
@@ -42,12 +9,18 @@ const llamandoAPI = async () => {
     );
     const { departments: data } = await respuesta.json();
 
-    console.log(data);
-
     if (data !== null) {
+      console.log(departamentos);
+
+      for (let i = 0; i < data.length; i++) {
+        departamentos[i].departmentId = data[i].departmentId;
+        departamentos[i].displayName = data[i].displayName;
+      }
       departamentos = data;
-      imprimirProducts(departamentos.slice((pagina - 1) * 6, pagina * 6));
+      console.log(departamentos);
+      imprimirProducts(departamentos);
     } else {
+      console.log(departamentos);
       console.log("no hay proximo");
     }
   } catch (error) {
@@ -56,7 +29,6 @@ const llamandoAPI = async () => {
 };
 
 llamandoAPI();
-//console.log(productos)
 
 const imprimirTarjeta = (id) => {
   console.log(`Quiero ver los objetos del departamento: ${id}`);
@@ -66,18 +38,12 @@ const imprimirTarjeta = (id) => {
 const imprimirProducts = (data) => {
   document.getElementById("departamentos").innerHTML = "";
 
-  if (data.length===0) {
-
-
+  if (data.length === 0) {
     let loader = document.createElement("div");
     loader.className += "loader";
     document.getElementById("departamentos").appendChild(loader);
-    console.log(loader)
- 
+    console.log(loader);
   } else {
- 
-
-
     for (let i = 0; i < data.length; i++) {
       let div = document.createElement("div");
       div.className += "card";
@@ -95,4 +61,4 @@ const imprimirProducts = (data) => {
   }
 };
 
-imprimirProducts(departamentos.slice((pagina - 1) * 6, pagina * 6));
+imprimirProducts(departamentos);
