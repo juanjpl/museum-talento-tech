@@ -11,10 +11,6 @@
   --color-blue-light: #8cd3ff;
   --color-green: #248c35;
 
-  --color-red-dark: #6e182e;
-  --color-red-medium: #a6192e;
-  --color-red-light: #e4002b;
-
   --font-size-18pt: 16px;
   --font-size-30pt: 24px;
   --font-size-49pt: 55px;
@@ -30,28 +26,28 @@
   box-sizing: border-box;
   color: white;
 }
-/****************     barra navegacion     ****************/
+
 header {
   width: 100vw;
-  height:fit-content;
+  height: 10%;
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 0 auto;
   justify-content: center;
   position: fixed;
-  background-color: var(--color-red-light);
+  background-color: rgba(0, 0, 0, 0.125);
   z-index: 25;
 }
 
 header > .logo {
-  width: 10%;  
+  width: 10%;
 }
-
-header > .logo >img{
-width: 40%;
-
-  }
+header > .logo > img {
+  width: 80%;
+  position: relative;
+  top: 1em;
+}
 
 header > nav {
   width: 50%;
@@ -60,40 +56,29 @@ header > nav {
   justify-content: end;
 }
 
-header > nav >ul>li{
-font-size: 1.2em;
-margin:0 1em;
-text-transform: uppercase;
-font-family: var(--font-roboto);
-font-weight: 400;
-transition: all .3s ease-in-out;
-
-padding:0.5em;
-  }
-
-  header > nav >ul>li:hover{
-    background-color: var(--color-red-medium);
-  }
+header > nav > ul > li {
+  font-size: 1.2em;
+  margin: 0 1em;
+  text-transform: uppercase;
+  font-family: var(--font-roboto);
+  font-weight: 400;
+}
 
 header > .social {
   width: 20%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-
-
 }
-header > .social>ul>li>a>i {
-font-size: 1.2em;
-margin:0 0.5em
-    
-  
-  }
+header > .social > ul > li > a > i {
+  font-size: 1.2em;
+  margin: 0 0.5em;
+}
 .contenedor-principal {
   width: 100vw;
   height: 100vh;
   background-color: #1a2020;
-  background-image: url(../src/img1.webp);
+  background-image: url(../src/img2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 20;
@@ -101,70 +86,42 @@ margin:0 0.5em
   flex-direction: column;
 }
 
-.contenedor-texto-hero {
-  width: 40vw;
-  height: max-content;
+.contenedor-productos {
+  width:min-content;
+  height:max-content ;
   padding: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
-  background-color: #f2f2f2;
-  margin:13% auto;
+  background-color: rgba(255, 255, 255, 0.447);
+  margin:auto;
+  gap: 1em;
+
+
 }
 
-.contenedor-texto-hero > h1 {
-  font-size: 3em;
-  line-height: 1.5em;
-  font-family: var(--font-roboto);
-  text-transform: uppercase;
-  margin: 0.5em 0em;
-  color:black;
-  font-weight: 600;
+#productos{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 1em;
+margin:auto;
+
 }
 
-.formulario-contacto {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  width: 70%;
-  margin: 0 auto;
-  color: black;
+.next , .prev {
+  margin:auto;
 }
 
-.formulario-contacto > label {
-  margin: 0.8em 0;
-  color: black;
-  font-size: 1em;
-  font-weight: 400;
-}
-
-.formulario-contacto > input {
-  padding: 0.6em;
-  margin: 0.5em 0;
-  color: black;
-  font-size: 1em;
-}
-
-.formulario-contacto > textarea {
-  padding: 0.6em;
-  margin: 0.5em 0;
-  color: black;
-  font-size: 1em;
-}
-
-.btn {
-  font-size: 1.5em;
-  background-color: var(--color-red-light);
-  border: 2px solid  var(--color-red-light);
-  color: white;
-  width:100%;
-  height: fit-content;
-  padding: 0.5em 2.5em;
+.next>span ,.prev>span {
+  border:1px solid #0000dd;
+  padding:0.5em 1em;
+  background-color: #0000dd;
   transition: 0.6s ease-in-out;
-  margin: 0.8em auto;
 }
 
+.next>span:hover , .prev>span:hover{
+  background-color: #000076;
+}
 
 
 .slide-in-blurred-top {
@@ -214,22 +171,30 @@ margin:0 0.5em
 }
 
 
-.boton-enviar-habilitado{
+.card{
+  border: 2px solid blue;
+  background-color: white;
 
-  background-color:  var(--color-red-light);
-  border: 2px solid  var(--color-red-light);
-
-  
+  padding:1em;
+  transition: all .2s ease-in-out;
 }
 
-.boton-enviar-habilitado:hover {
-  background-color:  var(--color-red-medium);
-  border: 2px solid transparent;
+.card>p , .card>h2 , .card>h3 , .card>h4{
+  color: black;
 }
 
+.card:hover{
+  border: 2px solid blue;
+  background-color: rgb(219, 23, 167);
 
+}
 
-.boton-enviar-deshabilitado{
-  background-color: rgb(220, 220, 220);
-  border:rgb(220, 220, 220);
+.btnVer{
+  color:white;
+  background-color: #248c35;
+  margin: 0 auto;
+  padding: 0.5em 2em;
+  width: 60%;
+  border: none;
+  display: block;
 }

@@ -2,50 +2,50 @@
 let productos= [
   {
     objectID :0,
-    GalleryNumber :"1",
+    GalleryNumber :"",
     title:"No found",
-    artistDisplayName :"1",
-    objectURL: "1",
+    artistDisplayName :"",
+    objectURL: "",
     primaryImage :"https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930 "
    },
    {
     objectID :0,
-    GalleryNumber :"1",
+    GalleryNumber :"",
     title:"No found",
-    artistDisplayName :"1",
-    objectURL: "1",
+    artistDisplayName :"",
+    objectURL: 1,
     primaryImage :"https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930 "
    },
    {
     objectID :0,
-    GalleryNumber :"1",
+    GalleryNumber :"",
     title:"No found",
-    artistDisplayName :"1",
-    objectURL: "1",
+    artistDisplayName :"",
+    objectURL: "",
     primaryImage :"https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930 "
    },
    {
     objectID :0,
-    GalleryNumber :"1",
+    GalleryNumber :"",
     title:"No found",
-    artistDisplayName :"1",
-    objectURL: "1",
+    artistDisplayName :"",
+    objectURL: "",
     primaryImage :"https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930 "
    },
    {
     objectID :0,
-    GalleryNumber :"1",
+    GalleryNumber :"",
     title:"No found",
-    artistDisplayName :"1",
-    objectURL: "1",
+    artistDisplayName :"",
+    objectURL: "",
     primaryImage :"https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930 "
    },
    {
     objectID :0,
-    GalleryNumber :"1",
+    GalleryNumber :"",
     title:"No found",
-    artistDisplayName :"1",
-    objectURL: "1",
+    artistDisplayName :"",
+    objectURL: "",
     primaryImage :"https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930 "
    },
   ];
@@ -124,7 +124,9 @@ llamandoAPI(departamentSelected);
 
 const imprimirTarjeta = (id)=>{
   console.log(`Quiero ver el producto: ${id}`)
-  localStorage.setItem("productSelected",`${id}` ); 
+  localStorage.setItem("productSelected",`${id}` );
+  window.location.pathname = "../../../pages/product/product.html";
+ 
 }
 
 
@@ -137,7 +139,6 @@ const imprimirProducts = (data) => {
     }else{
         for (let i = 0; i < data.length; i++) {
         
-         
             let div = document.createElement("div");
             div.className += "card";
             div.setAttribute("id", `${data[i].objectID}`);
@@ -148,12 +149,9 @@ const imprimirProducts = (data) => {
             <h3>${data[i].artistDisplayName}</h3>
             <p>${data[i].objectURL}</p>
             <img src=${data[i].primaryImage} alt={!${data[i].title} ?  https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg?20200913095930 : ${data[i].title}} width="150" height="150" >
-            <a class="btnVer" href="../../../pages/product/product.html" onClick={imprimirTarjeta(${data[i].objectID})} >Ver</a>
+            <button class="btnVer" onClick={imprimirTarjeta(${data[i].objectID})} >Ver</button>
             `;
          
-            //            <a class="btnVer" href="https://juanjpl.github.io/museum-talento-tech/pages/product/product.html" onClick={imprimirTarjeta(${data[i].objectID})} >Ver</a>
-
-            console.log(i)
             document.getElementById("productos").appendChild(div);
           }
 
