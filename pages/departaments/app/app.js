@@ -10,14 +10,15 @@ const llamandoAPI = async () => {
     const { departments: data } = await respuesta.json();
 
     if (data !== null) {
-      console.log(departamentos);
+      //console.log(departamentos);
 
       for (let i = 0; i < data.length; i++) {
         departamentos[i].departmentId = data[i].departmentId;
         departamentos[i].displayName = data[i].displayName;
       }
-      departamentos = data;
-      console.log(departamentos);
+
+      //console.log(departamentos);
+
       imprimirProducts(departamentos);
     } else {
       console.log(departamentos);
@@ -38,7 +39,7 @@ const imprimirTarjeta = (id) => {
 const imprimirProducts = (data) => {
   document.getElementById("departamentos").innerHTML = "";
 
-  if (data.length === 0) {
+  if (data[0].displayName === "") {
     let loader = document.createElement("div");
     loader.className += "loader";
     document.getElementById("departamentos").appendChild(loader);
@@ -49,6 +50,7 @@ const imprimirProducts = (data) => {
       div.className += "card";
       div.setAttribute("id", `${data[i].departmentId}`);
       div.innerHTML = `
+       <img src=${data[i].deptImg} alt={${data[i].title} width="100%" height="100%" >
             <h4>${data[i].departmentId}</h4>
             <h2>${data[i].displayName}</h2>
 <a class="btnVer" href="../../../pages/products/products.html" onClick={imprimirTarjeta(${data[i].departmentId})} >Ver</a>

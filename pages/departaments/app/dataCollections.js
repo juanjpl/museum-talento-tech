@@ -2,97 +2,97 @@
 export const departamentos = [
     {
         departmentId:1,
-        deptImg:"../src/img/collection_01.jpg",
+        deptImg:"../departaments/src/img/collection_01.jpg",
         displayName:""
       },
       {
         departmentId:3,
-        deptImg:"../src/img/collection_03.jpg",
+        deptImg:"../departaments/src/img/collection_03.jpg",
         displayName:""
       },
       {
         departmentId:4,
-        deptImg:"../src/img/collection_04.jpg",
+        deptImg:"../departaments/src/img/collection_04.jpg",
         displayName:""
       },
       {
         departmentId:5,
-        deptImg:"../src/img/collection_05.jpg",
+        deptImg:"../departaments/src/img/collection_05.jpg",
         displayName:""
       },
       {
         departmentId:6,
-        deptImg:"../src/img/collection_06.jpg",
+        deptImg:"../departaments/src/img/collection_06.jpg",
         displayName:""
       },
       {
         departmentId:7,
-        deptImg:"../src/img/collection_07.jpg",
+        deptImg:"../departaments/src/img/collection_07.jpg",
         displayName:""
       },
       {
         departmentId:8,
-        deptImg:"../src/img/collection_08.jpg",
+        deptImg:"../departaments/src/img/collection_08.jpg",
         displayName:""
       },
       {
         departmentId:9,
-        deptImg:"../src/img/collection_09.jpg",
+        deptImg:"../departaments/src/img/collection_09.jpg",
         displayName:""
       },
       {
         departmentId:10,
-        deptImg:"../src/img/collection_10.jpg",
+        deptImg:"../departaments/src/img/collection_10.jpg",
         displayName:""
       },
       {
         departmentId:11,
-        deptImg:"../src/img/collection_11.jpg",
+        deptImg:"../departaments/src/img/collection_11.jpg",
         displayName:""
       },
       {
         departmentId:12,
-        deptImg:"../src/img/collection_12.jpg",
+        deptImg:"../departaments/src/img/collection_12.jpg",
         displayName:""
       },
       {
         departmentId:13,
-        deptImg:"../src/img/collection_13.jpg",
+        deptImg:"../departaments/src/img/collection_13.jpg",
         displayName:""
       },
       {
         departmentId:14,
-        deptImg:"../src/img/collection_14.jpg",
+        deptImg:"../departaments/src/img/collection_14.jpg",
         displayName:""
       },
       {
         departmentId:15,
-        deptImg:"../src/img/collection_15.jpg",
+        deptImg:"../departaments/src/img/collection_15.jpg",
         displayName:""
       },
       {
         departmentId:16,
-        deptImg:"../src/img/collection_16.jpg",
+        deptImg:"../departaments/src/img/collection_16.jpg",
         displayName:""
       },
       {
         departmentId:17,
-        deptImg:"../src/img/collection_17.jpg",
+        deptImg:"../departaments/src/img/collection_17.jpg",
         displayName:""
       },
       {
         departmentId:18,
-        deptImg:"../src/img/collection_18.jpg",
+        deptImg:"../departaments/src/img/collection_18.jpg",
         displayName:""
       },
       {
         departmentId:19,
-        deptImg:"../src/img/collection_19.jpg",
+        deptImg:"../departaments/src/img/collection_19.jpg",
         displayName:""
       },
       {
         departmentId:21,
-        deptImg:"../src/img/collection_2.jpg",
+        deptImg:"../departaments/src/img/collection_21.jpg",
         displayName:""
       },
 ]
