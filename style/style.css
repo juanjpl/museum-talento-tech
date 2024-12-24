@@ -5,23 +5,10 @@
   --font-roboto: "Roboto Slab", serif;
   --font-vidaloka: "Vidaloka", serif;
 
-  --color-blue-dark-001: #01326c;
-  --color-blue-dark-002: #0066cb;
-  --color-blue-medium: #47a1f7;
-  --color-blue-light: #8cd3ff;
-  --color-green: #248c35;
-
   --color-red-dark: #6e182e;
   --color-red-medium: #a6192e;
   --color-red-light: #e4002b;
 
-
-  --font-size-18pt: 16px;
-  --font-size-30pt: 24px;
-  --font-size-49pt: 55px;
-
-  --font-weight-regular: 400;
-  --font-weight-bold: 700;
 }
 
 * {
@@ -96,17 +83,13 @@ margin:0 0.5em
   height: 100vh;
   display: flex;
   flex-direction: column;
-
-
-
 }
 
 video  {
   position: fixed;
   right: 0;
-  bottom: 0;
+  top: 0;
   width: 100vw;
-  transform: translateX(calc((100% - 100vw) / 2));
   z-index: -2;
 }
 
@@ -132,7 +115,7 @@ top:25%;
 }
 
 .contenedor-texto-hero > h1 {
-  font-size: 4.8em;
+  font-size: 4.8rem;
   line-height: 1.5em;
   font-family: var(--font-vidaloka);
   margin: 0.5em 0em;
