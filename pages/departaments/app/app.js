@@ -45,6 +45,9 @@ const imprimirProducts = (data) => {
     document.getElementById("departamentos").appendChild(loader);
     console.log(loader);
   } else {
+    let contenedor = document.getElementById("contenedor-principal");
+    contenedor.style.height="max-content";
+
     for (let i = 0; i < data.length; i++) {
       let div = document.createElement("div");
       div.className += "card";
