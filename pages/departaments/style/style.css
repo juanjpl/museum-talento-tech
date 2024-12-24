@@ -82,7 +82,7 @@ margin:0 0.5em
   
 .contenedor-principal {
   width: 100vw;
-  height: 100vh;
+
   background-color: #1a2020;
   background-image: url(../src/img2.jpg);
   background-size: cover;
@@ -92,6 +92,7 @@ margin:0 0.5em
   display: flex;
   flex-direction: column;
 justify-content: center;
+border:3px solid red;
 }
 
 .contenedor-productos {
@@ -102,6 +103,10 @@ justify-content: center;
   margin:auto;
 
 
+}
+
+.alturaMax{
+  height:max-content;
 }
 
 #departamentos{

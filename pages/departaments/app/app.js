@@ -45,8 +45,9 @@ const imprimirProducts = (data) => {
     document.getElementById("departamentos").appendChild(loader);
     console.log(loader);
   } else {
-    let contenedor = document.getElementById("contenedor-principal");
-    contenedor.style.height="max-content";
+    let contenedor = document.getElementById("contenedor-productos");
+    contenedor.className += " alturaMax";
+
 
     for (let i = 0; i < data.length; i++) {
       let div = document.createElement("div");
