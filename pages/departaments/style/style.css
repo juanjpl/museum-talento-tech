@@ -82,7 +82,6 @@ margin:0 0.5em
   
 .contenedor-principal {
   width: 100vw;
-
   background-color: #1a2020;
   background-image: url(../src/img2.jpg);
   background-size: cover;
@@ -97,10 +96,11 @@ border:3px solid red;
 
 .contenedor-productos {
   width:80vw;
-  height:100vh ;
+  height: 100vh;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.447);
   margin:auto;
+  border:3px solid green;
 
 
 }
@@ -113,9 +113,10 @@ border:3px solid red;
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 gap: 3em;
-margin:12% auto;
-width: 80vw;
+margin:12% auto 2% auto;
+width:100%;
 padding:0 2em;
+border:2px solid red;
 
 }
 
@@ -170,7 +171,7 @@ padding:0 2em;
 
 .loader {
   width: fit-content;
-  margin: auto;
+  margin:auto;
   font-weight: bold;
   font-family: monospace;
   font-size: 30px;

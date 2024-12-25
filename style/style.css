@@ -100,7 +100,7 @@ position: relative;
 margin:8% auto 0 auto;
   width: 70vw;
   height: 80vh;
-  border: 2px solid red;
+ 
   
 }
 .contenedor-texto-hero {
@@ -110,7 +110,7 @@ margin:8% auto 0 auto;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  border: 2px solid red;
+
  
 }
 
@@ -119,7 +119,7 @@ margin:8% auto 0 auto;
   line-height: 1.5em;
   font-family: var(--font-vidaloka);
   font-weight: 400;
-  border: 2px solid blue;
+
 }
 
 
@@ -127,7 +127,6 @@ margin:8% auto 0 auto;
     display:flex;
     flex-direction: row;
     background-color: rgba(0, 0, 0, 0.166);
-    border: 2px solid green;
     justify-content: end;
     height: auto;
   
@@ -163,7 +162,7 @@ margin:8% auto 0 auto;
     margin: auto 0;
     padding:0;
     width: 100%;
-    border: 2px solid red;
+    
  
 }
 
@@ -188,29 +187,6 @@ margin:8% auto 0 auto;
 
 
 }
-
-/*
-@keyframes change{
-
-    0%{
-        background-image: url(../src/background/statue-section-1.webp);
-    }
-    33.33%{
-        background-image: url(../src/background/statue-section-2.webp);
-    }
-    66.66%{
-        background-image: url(../src/background/statue-section-3.jpg);
-    }
-    100%{
-        background-image: url(../src/background/statue-section-1.webp);
-    }
-
- 
-  
-}
-
-    <iframe src="https://player.vimeo.com/video/1041757028?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="20241210_winter_homepage (2160p)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-*/
 
  .slide-in-fwd-center{-webkit-animation:slide-in-fwd-center 2s cubic-bezier(.25,.46,.45,.94) both;animation:slide-in-fwd-center 2s cubic-bezier(.25,.46,.45,.94) both}
  @-webkit-keyframes slide-in-fwd-center{0%{-webkit-transform:translateZ(-1400px);transform:translateZ(-1400px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}@keyframes slide-in-fwd-center{0%{-webkit-transform:translateZ(-1400px);transform:translateZ(-1400px);opacity:0}100%{-webkit-transform:translateZ(0);transform:translateZ(0);opacity:1}}
