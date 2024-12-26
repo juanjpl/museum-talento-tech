@@ -38,8 +38,6 @@ const imprimirTarjeta = (id) => {
 };
 
 
-
-
 const imprimirProducts = (data) => {
   document.getElementById("departamentos").innerHTML = "";
 
