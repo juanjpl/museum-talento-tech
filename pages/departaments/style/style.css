@@ -169,8 +169,8 @@ padding:0 2em;
 
 
 .loader {
-  width: 75vw;
-  margin:30vh auto;
+  width: 80%;
+  margin:10vh auto;
   font-weight: bold;
   font-family: monospace;
   font-size: 30px;
