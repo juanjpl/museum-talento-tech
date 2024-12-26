@@ -48,8 +48,13 @@ const imprimirProducts = (data) => {
     let contenedor = document.getElementById("contenedor-productos");
     contenedor.className += " alturaMax";
 
-
     for (let i = 0; i < data.length; i++) {
+      console.log(parseInt( `${data[i].departmentId}`))
+
+      let link = document.createElement("a");
+      link.addEventListener("click", imprimirTarjeta(data[i].departmentId));
+      link.className += "btnVer";
+      link.href +="btnVer"
       let div = document.createElement("div");
       div.className += "card";
       div.setAttribute("id", `${data[i].departmentId}`);
@@ -57,11 +62,11 @@ const imprimirProducts = (data) => {
        <img src=${data[i].deptImg} alt={${data[i].title} width="100%" height="100%" >
             <h4>${data[i].departmentId}</h4>
             <h2>${data[i].displayName}</h2>
-<a class="btnVer" href="../../../pages/products/products.html" onClick={imprimirTarjeta(${data[i].departmentId})} >Ver</a>
+
             `;
 
       //            <a class="btnVer" href="https://juanjpl.github.io/museum-talento-tech/pages/products/products.html" onClick={imprimirTarjeta(${data[i].departmentId})} >Ver</a>
-
+      //"../../../pages/products/products.html"
       document.getElementById("departamentos").appendChild(div);
     }
   }
