@@ -32,12 +32,18 @@ const llamandoAPI = async () => {
 llamandoAPI();
 
 const imprimirTarjeta = (id) => {
+  
   console.log(`Quiero ver los objetos del departamento: ${id}`);
   localStorage.setItem("departamentSelected", `${id}`);
 };
 
+
+
+
 const imprimirProducts = (data) => {
   document.getElementById("departamentos").innerHTML = "";
+
+
 
   if (data[0].displayName === "") {
     let loader = document.createElement("div");
@@ -49,24 +55,34 @@ const imprimirProducts = (data) => {
     contenedor.className += " alturaMax";
 
     for (let i = 0; i < data.length; i++) {
-      console.log(parseInt( `${data[i].departmentId}`))
+
 
       let link = document.createElement("a");
-      link.addEventListener("click", imprimirTarjeta(data[i].departmentId));
+      link.addEventListener("click", ()=>{
+        imprimirTarjeta(data[i].departmentId)
+      })
       link.className += "btnVer";
-      link.href +="btnVer"
+      link.href += "../../../pages/products/products.html";
+      link.innerText += "visit";     
+      link.setAttribute("id",`${data[i].departmentId}`)
+   
+
+     
+
       let div = document.createElement("div");
       div.className += "card";
       div.setAttribute("id", `${data[i].departmentId}`);
       div.innerHTML = `
-       <img src=${data[i].deptImg} alt={${data[i].title} width="100%" height="100%" >
+       <img src=${data[i].deptImg} alt={${data[i].title}} width="100%" height="100%" >
             <h4>${data[i].departmentId}</h4>
             <h2>${data[i].displayName}</h2>
-
+        
             `;
+      div.appendChild(link);
 
       //            <a class="btnVer" href="https://juanjpl.github.io/museum-talento-tech/pages/products/products.html" onClick={imprimirTarjeta(${data[i].departmentId})} >Ver</a>
       //"../../../pages/products/products.html"
+
       document.getElementById("departamentos").appendChild(div);
     }
   }
